@@ -1,0 +1,29 @@
+<script>// <![CDATA[
+function setValue(item, val) {
+   document.getElementById(item).value = val;
+}
+function calculate() {
+   var boxynum = Number(document.getElementById("boxy").value);
+   setValue("boxy2", boxynum);
+   setValue("boxyplus2", boxynum+2); 
+   setValue("answer1", boxynum * (boxynum + 2)); 
+   setValue("boxyplus1", boxynum + 1);
+   setValue("answer2",Math.pow(boxynum + 1, 2)-1);
+}
+// ]]></script>
+
+<style>
+input[type="text"] {
+  width: 100px
+}
+</style>
+
+<div>I call it the grilled cheese sandwich algorithm. It is two equations based off one number that equal each other. Try it. </div>
+
+<input type="text" id="boxy" size="4"/><button id="calculate" onClick="calculate()">calculate</button>
+
+<input type="text" id="boxy2" readonly/> * <input type="text" id="boxyplus2" readonly/> = <input type="text" id="answer1" readonly/>
+
+<input type="text" id="boxyplus1" readonly/>^2 - 1 = <input type="text" id="answer2" readonly/>
+
+
